@@ -1,0 +1,63 @@
+
+//old IE8 HTML Wrapper
+.old-ie {
+	.site {
+
+		.primary-nav {
+			background: #ffffff;
+		}
+
+		.main-header > .container {
+			width: 940px;
+		}
+
+		.header-fixed .site-logo {
+			width: 153px;
+			height: 109px;
+		}
+
+		.hero-image {
+			background: #f4e8d4;
+
+			.fullwidthbanner-container {
+				display: block;
+				width: 960px;
+				margin: 0 auto;
+			}
+		}
+
+		//More about use on homepage
+		.more-about-us-section { 
+			width: 28.5%;
+
+			.img-callout-caption {
+				background: #284a6e;
+				height: 75px;
+
+				* {
+					margin: 0;
+				}
+
+
+				h6 {
+					text-align: center;
+				}
+			}
+		}
+
+		.more-about-us-section.team {
+			width: 70.66%;
+			.more-about-us-callout {
+				.img-about-us-callout {
+					width: 200px;
+
+					.img-full-width-responsive {
+						max-width: none;
+					}
+				}
+			}
+
+		}
+	}
+
+}

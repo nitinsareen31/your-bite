@@ -1,0 +1,387 @@
+/* ------------------------------------------------------------------------------
+Main Locations Moduals, used on footer and in interior pages
+--------------------------------------- */
+
+.north-tpa-main, .south-tpa-main {
+	width: 100%;
+
+	h5 {
+		text-transform: uppercase;
+		@include rem(font-size, 2rem);
+		color: $dark-base;
+		margin: 0;
+		line-height: 1em;
+
+		@include desktop-ie8 {
+			@include rem(font-size, 2.4rem);
+		}
+	}
+
+	a.header-link {
+			color: $dark-base;
+		}
+
+	a, p {
+		display: inline-block;
+		zoom: 1;
+		*display: inline;
+		vertical-align: top;
+	}
+	//setup for icon, links to contact page
+	a.loc-link  {
+		font-family: $icon-font;
+		@include rem(font-size, 2.8rem);
+		color: $dark-base;
+
+		&:hover {
+			color: $parimary-color-variant;
+			text-decoration: none;
+		}
+		//loction icon
+		span {
+			&:before {
+				content: '\e816';
+			}
+		}
+	}
+
+	p {
+		font-family: $callout-font-stack;
+		@include rem(font-size, 1.2rem);
+		width: auto;
+		padding-left: $sm-spacing/3;
+		margin-top: $sm-spacing/2;
+
+		@include breakpoint ($breakpoint768) {
+			width: 85%;
+		}
+
+		@include desktop-ie8 {
+			width: 89%;
+			@include rem(font-size, 1.3rem);
+		}
+
+		a {
+			color: $dark-base;
+		}
+	}
+}
+
+//Appointment CTA
+.appt-cta {
+	background: $secondary-color;
+	padding: $general-spacing/1.5 0;
+
+	&:hover {
+		background: lighten($secondary-color, 5%);
+	}
+
+	a.req-appt {
+		display: block;
+		width: 90%;
+		margin: 0 auto;
+		color: $white;
+		text-transform: uppercase;
+		@include rem(font-size, 2rem);
+		font-family: $callout-font-stack;
+		@include font-smoothing;
+		line-height: .9em;
+
+		//desktop 
+		@include desktop-ie8 {
+			@include rem(font-size, 2.6rem);
+		}
+
+		&:hover {
+			color: $secondary-neutral;
+			text-decoration: none;
+		}
+
+		span {
+			//for ie8 support of inline-block
+			display: inline-block;
+			zoom: 1;
+			*display: inline;
+			vetical-align: top;
+		}
+		//actual mail icon
+		span.icon-mail {
+			&:before {
+				@include rem(font-size, 4rem);
+				font-family: $icon-font;
+				content: '\e806';
+
+				//desktop 
+				@include desktop-ie8 {
+					@include rem(font-size, 5.6rem);
+				}
+
+				&:hover {
+				color: $secondary-neutral;
+				text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+//Desktop Header version 
+.main-desktop-callout {
+	padding: 0;
+
+	.north-tpa-main {
+		border-right: 5px solid darken($secondary-neutral, 5%);
+	}
+
+	.north-tpa-main, .south-tpa-main {
+		margin: $general-spacing/1.5 0;
+		padding:  $sm-spacing;
+
+		h5 {
+			margin-left: $sm-spacing/5;
+		}
+
+		p {
+			@include rem(font-size, 1.2rem);
+			text-transform: uppercase;
+			line-height: 1.15em;
+			padding: 0;
+			margin: 0;
+			width: 100%;
+			padding-left: $sm-spacing/3;
+
+			//desktop 
+			@include desktop-ie8 {
+				@include rem(font-size, 1.5rem);
+			}
+		}
+	}
+
+	.appt-cta {
+
+		.req-appt {
+			padding: $lg-spacing/1.5 0;
+
+			//desktop 
+			@include desktop-ie8 {
+				padding: $lg-spacing/2 0;
+			}
+		}
+		
+	}
+}
+
+//ie8 Fix
+.site .ol-ie .main-desktop-callout .col-md-4 {
+	width: 32.3%
+}
+
+//Locations in header on mobile only
+.main-header {
+
+	.mobile-locations {
+		display: block;
+
+		@include breakpoint ($breakpoint768) {
+			display: none;
+		}
+
+		@include desktop-ie8 {
+			display: none;
+		}
+
+		> .container {
+			width: 100%;
+			padding: 0;
+		}
+
+		.north-tpa-main {
+			border-right: 3px solid darken($secondary-neutral, 5%);
+		}
+
+		.north-tpa-main, .south-tpa-main {
+
+			//stacking address & phone
+			a {
+				display: block;
+				color: $dark-base;
+				font-family: $callout-font-stack;
+
+				//Location link & marker
+				&:first-of-type {
+					h5 {
+						@include rem(font-size, 1.3rem);
+						margin-bottom: $sm-spacing/3;
+
+						&:before {
+							font-family: $icon-font;
+							content: '\e816';
+							margin-right: $sm-spacing/3;
+						}
+					}
+				}
+
+				&:hover {
+					text-decoration: none;
+				}
+			}
+
+			//Nested in p
+			p {
+				margin: 0;
+				//Phone link & marker
+				a {
+					@include rem(font-size, 1.0rem);
+					
+
+					//for alignment with akward phone icon
+					span {
+						display: inline-block;
+						zoom: 1;
+						*display: inline;
+						 vertical-align: top;
+
+						 &:first-of-type {
+							&:before {
+								font-family: $icon-font;
+								content: '\e815';
+								margin-right: $sm-spacing/3;
+								@include rem(font-size, 1.6rem);
+							}
+						}
+
+						&:nth-of-type(2) {
+							padding-top: $sm-spacing;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+//left nav interior version 
+.left-nav-section {
+	//Appointment CTA
+	.appt-cta {
+		a.req-appt {
+			display: block;
+			width: 90%;
+			margin: 0 auto;
+			color: $white;
+			text-transform: uppercase;
+			font-family: $callout-font-stack;
+			padding: $sm-spacing/2 0;
+			@include font-smoothing;
+
+			//desktop 
+			@include desktop-ie8 {
+				@include rem(font-size, 2.6rem);
+			}
+
+			&:hover {
+				color: $secondary-neutral;
+				text-decoration: none;
+			}
+
+			span {
+				//for ie8 support of inline-block
+				display: inline-block;
+				zoom: 1;
+				*display: inline;
+				vetical-align: top;
+				@include rem(font-size, 1.25rem);
+				line-height: .9em;
+
+				//desktop 
+				@include desktop-ie8 {
+					@include rem(font-size, 1.75rem);
+				}
+
+			}
+			//actual mail icon
+			span.icon-mail {
+				margin: 0 auto;
+				&:before {
+					/*@include rem(font-size, 4rem);*/
+					font-family: $icon-font;
+					content: '\e806';
+					@include rem(font-size, 3rem);
+
+					//desktop 
+					@include desktop-ie8 {
+						@include rem(font-size, 3.75rem);
+					}
+
+					&:hover {
+					color: $secondary-neutral;
+					text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+	.loc-header {
+		h4 {
+			margin-top: 0;
+			border-bottom: 3px solid darken($secondary-neutral,8%);
+		}
+	}
+	.north-tpa-main {
+		border-bottom: 3px solid darken($secondary-neutral,8%);
+		margin-bottom: $sm-spacing;
+	}
+
+	.north-tpa-main, .south-tpa-main {
+		padding-bottom: $sm-spacing;
+
+				h5 {
+					@include rem(font-size, 1.75rem);
+					margin-bottom: $sm-spacing/2;
+
+					a {
+						color: $dark-base;
+					}
+				}
+
+				p {
+					font-family: $primary-font-stack;
+					@include rem(font-size, 1.2rem);
+					text-transform: uppercase;
+					line-height: 1.15em;
+					padding: 0;
+					margin: $sm-spacing/1.75 0 0 0;
+					padding-left: $sm-spacing/3;
+
+					//desktop 
+					@include desktop-ie8 {
+						@include rem(font-size, 1.3rem);
+						margin: $sm-spacing/1.5 0 0 0;
+					}
+				}
+
+				//setup for icon, links to contact page
+				a.loc-link  {
+					font-family: $icon-font;
+					@include rem(font-size, 2rem);
+					color: $dark-base;
+
+					@include desktop-ie8  {
+						@include rem(font-size, 2.5rem);
+					}
+
+					&:hover {
+						color: $parimary-color-variant;
+						text-decoration: none;
+					}
+					//loction icon
+					span {
+						&:before {
+							content: '\e816';
+						}
+					}
+				}
+			}
+
+}
+

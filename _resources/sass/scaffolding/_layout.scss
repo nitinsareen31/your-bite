@@ -1,0 +1,587 @@
+/* ------------------------------------------------------------------------------
+Scaffolding Related to Layout
+--------------------------------------- */
+
+// Dark beige colored section
+.beige-span {
+  width: 100%;
+  height: auto;
+  background: $secondary-neutral;
+  padding: $sm-spacing 0;
+  @include clear-fix;
+}
+
+// Feldman-blue colored section
+.blue-span {
+  width: 100%;
+  height: auto;
+  background: $primary-color;
+  padding: $sm-spacing 0;
+  @include clear-fix;
+}
+
+// Feldman-orange colored section
+.orange-span {
+  width: 100%;
+  height: auto;
+  background: $secondary-color;
+  padding: $sm-spacing 0;
+  @include clear-fix;
+}
+//White colored section
+.white-span {
+  width: 100%;
+  height: auto;
+  background: $white;
+  padding: $sm-spacing 0;
+  @include clear-fix;
+}
+.content-section {
+  @include clear-fix;
+}
+
+//
+// Hompage Specific
+// --------------------------------------------------
+
+//Locations & Request -- locations use main-locations-cta module in the partial of that name 
+.main-desktop-callout, .more-about-us {
+  display: none;
+
+
+  @include breakpoint ($breakpoint768) {
+    display: block;
+  }
+  //ie8
+  @include desktop-ie8 {
+    display: block;
+  }
+
+  
+}
+
+//Community Section (Remarkable Patients & Community CTA)
+.community-section {
+  padding-bottom: $lg-spacing;
+
+  .patient-cta {
+    padding-top: $lg-spacing;
+
+    @include breakpoint ($breakpoint768) {
+      padding-top: 0;
+
+    }
+  }
+
+   .patient-picture, .patient-text {
+    display: table-cell;
+    vertical-align: top;
+   }
+
+    .patient-text {
+      width: auto;
+
+        .patient-picture {
+          width: 40%;
+          max-width: 216px;
+          margin: 0 auto;
+          float: left;
+          clear: none;
+          border-left: $invert-button-border;
+          border-bottom: $invert-button-border;
+
+          @include breakpoint ($breakpoint768){
+            width: 20%;
+            margin: 0;
+
+          }
+
+          @include desktop-ie8{
+            width: 100%;
+          }
+      }
+
+      h2, h6 {
+        float: left;
+        clear: none;
+        width: 60%;
+        margin: 0;
+        padding-left: $sm-spacing*2;
+
+        @include breakpoint ($breakpoint480) {
+          width: 60%;
+        }
+
+        @include breakpoint ($breakpoint768) {
+          width: 75%;
+        }
+
+        @include desktop-ie8 {
+          width: 60%;
+        }
+      }
+
+      h2 {
+        padding-left: $sm-spacing;
+      }
+
+      p {
+        float: left;
+        clear: none;
+        width: 100%;
+        padding-left: 0;
+
+        @include breakpoint ($breakpoint480) {
+          width: 60%;
+          padding-left: $sm-spacing*2;
+          
+        }
+
+        @include breakpoint ($breakpoint768) {
+          width: 100%;
+          padding-left: 0;
+        }
+
+        @include desktop-ie8 {
+          width: 60%;
+          padding-left: $sm-spacing*2;
+        }
+      }
+
+      span {
+        float: right;
+        text-align: right;
+        clear: none;
+        width: 100%;
+        padding-left: 0;
+
+        @include breakpoint ($breakpoint480) {
+          padding-left: $sm-spacing*2;
+          
+        }
+
+        @include breakpoint ($breakpoint768) {
+          width: 100%;
+          padding-left: 0;
+        }
+
+        @include desktop-ie8 {
+          width: 60%;
+          padding-left: $sm-spacing*2;
+        }
+      }
+    }
+
+    .community-cta {
+        margin-top: $md-spacing;
+        display: none;
+        background: $secondary-neutral;
+        height: 265px;
+        max-width: 313px;
+        position: relative;
+
+        @include breakpoint ($breakpoint768) {
+          display: block;
+        }
+
+        @include desktop-ie8 {
+          height: 315px;
+        }
+
+        .community-cta-img {
+          padding: $sm-spacing;
+          margin: 0 auto;
+          max-width: 280px;
+          
+        }
+
+        .community-cta-caption {
+          position: absolute;
+          top: 0;
+          right: 15px;
+          > * {
+          width: 100%;
+          display: block;
+          @include clear-fix;
+        }
+
+        h4 {
+          margin-top:$lg-spacing*1.75;
+          text-align: right;
+
+          @include desktop-ie8 {
+            margin-top:$lg-spacing*2.25;
+            margin-right: $md-spacing;
+          }
+        }
+
+        p {
+          display: block;
+          margin-top:$lg-spacing*5;
+          font-family: $callout-font-stack;
+          @include rem(font-size, 1.2rem);
+          text-align: center;
+
+          @include desktop-ie8 {
+            margin-top:$lg-spacing*4.5;
+            @include rem(font-size, 1.6rem);
+          }
+        }
+
+        .btn-cont {
+          text-align: right;
+          @include clear-fix;
+
+          a {
+            
+          }
+        }
+
+        }
+    }
+}
+
+//Feldman TV Section {
+
+  .feldman-tv-callout {
+    width: 95%;
+    margin: 0 auto;
+    p {
+      font-weight: 600;
+      margin: $lg-spacing 0;
+    }
+  }
+
+  .feldman-tv-cont {
+    padding-top: $lg-spacing;
+    padding-bottom: $lg-spacing;
+
+    > div {
+      &:nth-of-type(2) {
+        display: none;
+
+        @include breakpoint ($breakpoint768) {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .feldman-tv-header {
+    max-width: 460px;
+  }
+
+  .video-section {
+    padding-left: $md-spacing;
+  }
+
+  .blue-callout {
+    color: $parimary-color-variant;
+    @include rem(font-size, 2.1rem);
+    margin: $sm-spacing 0;
+  }
+
+  .video-placeholder {
+    position: relative;
+    max-width: 395px;
+
+
+    .play-btn {
+      width: 91px;
+      height: 91px;
+      position: absolute;
+      left: 40%;
+      top: 35%;
+      background: url(#{$structure-image-path}play-btn.png) 0 0 no-repeat;
+    }
+  }
+
+
+//More About us Section
+.more-about-us-section {
+  padding: $lg-spacing 0;
+
+  .img-about-us-callout  {
+    position: relative;
+  }
+
+  .img-about-us-callout {
+      width: 100%;
+      border-left: $blue-variant-border;
+      border-bottom: $blue-variant-border;
+    }
+
+    .img-callout-caption {
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: rgba(40, 74, 110, .5);
+
+      * {
+        color: $white;
+      }
+    }
+
+  //Braces & You Section
+  &:first-of-type {
+
+    .img-about-us-callout {
+      max-width: 298px;
+
+      .img-callout-caption {
+        img {
+          margin: $sm-spacing/2 0 0 $sm-spacing;
+        }
+
+        h6 {
+            @include rem(font-size, 2.1rem);
+            margin: -$sm-spacing $sm-spacing 0 0;
+            text-align: right;
+
+          @include desktop-ie8 {
+            @include rem(font-size, 2.8rem);
+          }
+        }
+      }
+    }
+  }
+
+  //Featured Staff Section
+  &.team {
+
+    .content-cont {
+      margin-left: $lg-spacing;
+      background: $parimary-color-variant-drk;
+    }
+
+    .img-callout-link, .txt-about-us-callout {
+      display: inline-block;
+      zoom: 1;
+      *display: inline;
+      vertical-align: top;
+      @include clear-fix;
+    }
+
+    .img-callout-link {
+      max-width: 244px;
+    }
+
+    .img-about-us-callout {
+      width: auto;
+      max-width: 180px;
+      
+      @include desktop-ie8 {
+        max-width: 239px;
+      }
+
+      @include breakpoint ($breakpoint1200) {
+        max-width: 244px;
+      }
+
+      .img-callout-caption {
+        * {
+          width: 100%;
+          display: block;
+          text-align: center;
+        }
+
+        h6 {
+          margin: 0 auto 0 auto;
+          @include rem(font-size, 3.6rem);
+        }
+
+        p {
+            @include rem(font-size, 2.1rem);
+            margin: -$sm-spacing auto 0 auto;
+
+            @include desktop-ie8 {
+            @include rem(font-size, 2.8rem);
+          }
+        }
+      }
+    }
+
+    .txt-about-us-callout {
+      width: 55%;
+      padding: $sm-spacing;
+
+        p {
+          color: $white;
+          @include rem(font-size, 1.6rem);
+          line-height: 1.2em;
+
+          @include desktop-ie8 {
+            @include rem(font-size, 2.1rem);
+          }
+        }
+    }
+  }
+}
+
+//Invisalign homepage cta 
+  .invisalign-cta {
+    margin-top: $md-spacing/1.5;
+
+    > .col-lg-10 {
+      display: table-row;
+    }
+  }
+  .invs-logo-cont, .invs-txt-cont, .invs-link-cont {
+    display: block;
+    vertical-align: top;
+
+    @include breakpoint ($breakpoint480) {
+      display: table-cell;
+    }
+    
+
+    @include breakpoint ($breakpoint768) {
+      width: 100%;
+    }
+  }
+
+  .invs-logo-cont {
+    width: 100%;
+
+    @include breakpoint ($breakpoint480){
+      width: 191px;
+    } 
+    img {
+      display: block;
+      margin: 0 auto 0 auto;
+
+      @include desktop-ie8 {
+        margin: $sm-spacing auto 0 auto;
+      }
+    }
+  }
+
+  .invs-txt-cont {
+    padding-left: $sm-spacing;
+    width: 100%;
+    text-align: center;
+    @include breakpoint ($breakpoint480) {
+      width: auto;
+    }
+    p {
+      font-family: $callout-font-stack;
+      color: #acacac;
+      @include rem(font-size, 1.5rem);
+      text-transform: uppercase;
+      padding-top: $sm-spacing;
+      margin-bottom: $sm-spacing;
+      line-height: 1em;
+
+      @include breakpoint ($breakpoint768) {
+        @include rem(font-size, 2.1rem);
+      }
+
+      @include desktop-ie8 {
+        @include rem(font-size, 3.1rem);
+      }
+
+      @include breakpoint ($breakpoint1200) {
+        padding-top: $sm-spacing/1.5;
+        @include rem(font-size, 3.5rem);
+      }
+      span {
+       color: $parimary-color-variant;
+      }
+    }
+  }
+
+  .invs-link-cont {
+    text-align: center;
+    padding-top: $sm-spacing;
+
+    @include breakpoint ($breakpoint768) {
+         text-align: left; 
+      }
+    .link-btn {
+      color: $tertiary-color;
+      @include rem(font-size, 1.5rem);
+
+      span {
+        display: block;
+        margin-top: 0px;
+        
+
+        &:after {
+          @include rem(font-size, 1.4rem);
+          font-family: $icon-font;
+          content: "\e803";
+          margin-left: $sm-spacing/2;
+        }
+      }
+
+
+      &:after { 
+        content: "";
+      }
+
+      @include breakpoint ($breakpoint480) {
+          
+      }
+
+    }
+  }
+
+//
+// Interior Page - Lef Nav
+// --------------------------------------------------
+  .int-page-wrapper {
+    padding: $lg-spacing 0 $lg-spacing*2 0;
+    @include clear-fix;
+  }
+
+  .left-nav-section {
+    display: none;
+
+    @include breakpoint ($breakpoint768) {
+      display: block;
+    }
+
+    @include desktop-ie8 {
+      display: block;
+    }
+
+    .beige-span {
+      margin-top: $sm-spacing;
+      padding: $sm-spacing;
+    }
+    //Lef Nav
+    .left-nav {
+      ul {
+        li {
+
+          &.active {
+            a {
+              border-bottom: 3px solid $secondary-color;
+            }
+          }
+
+          a {
+            display: block;
+            font-family: $callout-font-stack;
+            color: $dark-base;
+            width: 100%;
+            padding: $sm-spacing/2 $sm-spacing/2 $md-spacing/5 $sm-spacing/2;
+            border-bottom: 3px solid $primary-neutral;
+            margin-top: $sm-spacing/2;
+
+            &.first-of-type {
+              margin-top: 0;
+            }
+
+            &:hover {
+              color: $secondary-color-variant;
+              text-decoration: none;
+              border-bottom: 3px solid $secondary-color;
+              background: $secondary-neutral;
+            }
+          }
+        }
+      }
+    }
+  }

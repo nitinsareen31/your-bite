@@ -1,0 +1,224 @@
+/* ------------------------------------------------------------------------------
+Footer
+--------------------------------------- */
+
+footer {
+	.footer-main {
+		h4 {
+				text-transform: uppercase;
+			}
+		h5 {
+			line-height: 1em;
+		}	
+
+		p {
+			color: $white;
+		}
+
+		h5 { 
+			margin-top: 0;
+		}
+	}
+
+	.blog-section {
+
+		> h4 {
+			width: 100%;
+		}
+
+		h5 {
+				text-transform: uppercase;
+			}
+
+		.blog-picture, .blog-teaser-text {
+			display: inline-block;
+			*display: inline;
+			vertical-align: top;
+		}
+
+		.blog-picture {
+			width: 100%;
+
+			@include breakpoint ($breakpoint480) {
+				width: 30%;
+				max-width: 295px;
+			}
+
+			@include breakpoint ($breakpoint768) {
+				width: 40%;
+			}
+
+			@include desktop-ie8 {
+				width: 45%px;
+			}
+
+			img {
+				@include responsive-img-full-width;
+			}
+		}
+
+		.blog-teaser-text {
+			width: 100%;
+			margin: $sm-spacing*1.5 0 0 0;
+
+			@include breakpoint ($breakpoint480) {
+				width: 65%;
+				margin: 0 0 0 $sm-spacing*1.5;
+				
+			}
+
+			@include breakpoint ($breakpoint768) {
+				width: 55%;
+			}
+
+			@include desktop-ie8 {
+				width: 50%px;
+			}
+
+		}
+	}
+
+	.subscribe-cont {
+		input, .invert-btn {
+			display: inline-block;
+			*display: inline;
+		}
+
+		input {
+			width: 65%;
+			margin-right: $sm-spacing;
+		}
+	}
+
+	.footer-social-media {
+
+		ul {
+			li{
+				display: inline-block;
+				*display: inline;
+
+				//setup for icons
+				a {
+					color: $white;
+					display: block;
+					font-family: $icon-font;
+					@include rem(font-size, 3.2rem);
+
+					&:hover {
+						text-decoration: none;
+						color: $secondary-neutral;
+					}
+				}
+
+				//hide text
+				p {
+					display: none;
+				}
+				//specific icons
+				span {
+					display: block;
+					margin: $sm-spacing $sm-spacing 0 0 ;
+					//Facebook
+					&.fb {
+						&:after {
+							content: '\e811';
+						}
+					}
+					//Google Plus
+					&.gp {
+						&:after {
+							content: '\e80e';
+						}
+					}
+
+					//Twitter
+					&.tw {
+						&:after {
+							content: '\e80c';
+						}
+					}
+
+					//Pintrest
+					&.pn {
+						&:after {
+							content: '\e80d';
+						}
+					}
+
+					//Instagram
+					&.ig {
+						&:after {
+							content: '\e80f';
+						}
+					}
+
+					//Linkedin
+					&.in {
+						&:after {
+							content: '\e810';
+						}
+					}
+
+					//Yelp
+					&.yp {
+						&:after {
+							content: '\e812';
+						}
+					}
+				}
+			}
+		}
+	}
+
+	//Site Map Area
+	.site-map {
+		display: none;
+
+		@include breakpoint ($breakpoint768) {
+			display: block;
+		}
+
+		@include desktop-ie8 {
+			display: block;
+		}
+
+		>.container >.row {
+			padding-top: $lg-spacing*2;
+		}
+
+		ul {
+			li {
+				a {
+					font-family: $callout-font-stack;
+					@include rem(font-size, 1.4rem);
+					color: $dark-base;
+
+					&:hover {
+						color: $parimary-color-variant;
+					}
+				}
+			}
+		}
+	}
+
+	//Sub footer area
+	.sub-footer {
+		p {
+			@include rem(font-size, 1.2rem);
+			font-family: $callout-font-stack;
+			text-align: center;
+
+			@include breakpoint ($breakpoint768) {
+				text-align: left;
+			}
+		}
+		//enox media tag to right
+		>.container >.row >div:nth-of-type(2) p {
+			text-align: center;
+
+			@include breakpoint ($breakpoint768) {
+				text-align: right;
+			}
+		}
+	}
+}

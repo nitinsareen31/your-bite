@@ -1,0 +1,278 @@
+/* ------------------------------------------------------------------------------
+Utility
+--------------------------------------- */
+
+//Clear fix
+@mixin clear-fix {
+    &:before,
+    &:after {
+        content: " ";
+        /* 1 */
+        display: table;
+        /* 2 */
+    }
+    &:after {
+        clear: both !important;
+    }
+}
+
+// Box sizing
+@mixin box-sizing($boxmodel) {
+    -webkit-box-sizing: $boxmodel;
+    -moz-box-sizing: $boxmodel;
+    box-sizing: $boxmodel;
+}
+
+// For applying rgba(transparent) backgrounds with a hex backup for older browsers
+/* USAGE: @include background-opacity($grey,.5);*/
+@mixin background-opacity($color, $opacity) {
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
+//Font smoothing for the better appearance of webfonts
+@mixin font-smoothing ($value: antialiased) {
+  -webkit-font-smoothing: $value;
+}
+
+/* Mixin for creating ie8 content versions*/
+@mixin desktop-ie8 { 
+    @include breakpoint($breakpoint1024) { 
+        @content 
+    } 
+        .old-ie & { 
+            @content 
+            } 
+        } 
+
+/* ------------------------------------------------------------------------------
+Main rem font sizing & px fallback for ie8
+--------------------------------------- */
+
+@function parseInt($n) { /* 2 */
+  @return $n / ($n * 0 + 1);
+}
+
+@mixin rem($property, $values) {
+  $px : (); /* 3 */
+  $rem: (); /* 3 */
+  
+  @each $value in $values { /* 4 */
+   
+    @if $value == 0 or $value == auto { /* 5 */
+      $px : append($px , $value);
+      $rem: append($rem, $value);
+    }
+    
+    @else { 
+      $unit: unit($value);    /* 6 */
+      $val: parseInt($value); /* 6 */
+      
+      @if $unit == "px" {  /* 7 */
+        $px : append($px,  $value);
+        $rem: append($rem, ($val / 10 + rem));
+      }
+      
+      @if $unit == "rem" { /* 7 */
+        $px : append($px,  ($val * 10 + px));
+        $rem: append($rem, $value);
+      }
+    }
+  }
+  
+  @if $px == $rem {     /* 8 */
+    #{$property}: $px;  /* 9 */
+  } @else {
+    #{$property}: $px;  /* 9 */
+    #{$property}: $rem; /* 9 */
+  }
+}
+
+/* --------- Notes 
+1. The mixin relies on a baseline of 10px
+2. The mixin relies on a function to parse the integer from a value with a unit
+3. We define a list of values for both units
+4. We iterate through each value in the given parameter $values
+5. If the value is either auto or 0, we append it to the list as-is
+6. If the value has a unit, we split it to get both the unit and the raw value
+7. We append according values to the lists depending on the unit of the given value
+8. If the two lists are the same, we ouput only one (like margin-top: 0)
+9. We output the result
+--------- */
+
+/* ------------------------------------------------------------------------------
+Responsive Images
+--------------------------------------- */
+
+// Responsive images
+@mixin responsive-img($display: block) {
+    display: $display;
+    //width:100%;
+    max-width: 100%;
+    height: auto;
+    // Scale height auto in proportion to width to prevent stretching
+}
+
+//Responsive Images Full Width
+@mixin responsive-img-full-width($display: block) {
+    display: $display;
+    width:100%; // if you don't want images filling 100%, use mixin responsive-img above
+    max-width: 100%;
+    height: auto;
+}
+
+/* ------------------------------------------------------------------------------
+Form Related
+--------------------------------------- */
+
+/* Placeholder -- Will Want to Change Color*/
+@mixin placeholder($color: darken(#eee, 25%)) {
+    font-size: 1em;
+    &:-moz-placeholder {
+        color: $color;
+    }
+    // Firefox 4-18
+    &::-moz-placeholder {
+        color: $color;
+    }
+    // Firefox 19+
+    &:-ms-input-placeholder {
+        color: $color;
+    }
+    // Internet Explorer 10+
+    &::-webkit-input-placeholder {
+        color: $color;
+    }
+    // Safari and Chrome
+}
+
+//general form on focus event
+@mixin general-form-focus($color: $secondary-color) {
+    $color-rgba: rgba(red($color), green($color), blue($color), 0.6);
+    &:focus {
+        border-color: $color;
+        outline: 0;
+    }
+}
+
+//invert form on focus event
+@mixin invert-form-focus($color: $secondary-neutral) {
+    $color-rgba: rgba(red($color), green($color), blue($color), 0.6);
+    &:focus {
+        border-color: $color;
+        outline: 0;
+    }
+}
+
+/*Icont font styles
+@mixin icon-style {
+  font-family: $icon-font;
+  font-size: 115%;
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: none;
+  height: 1em;
+  width: 1em;
+  text-align: center;
+  opacity: 0.95;
+  line-height: 1.2;
+  vertical-align: -.05em;
+}
+
+//Font Sizing with Rem
+@mixin font-size($size-value:1.2) {
+    font-size:$size-value * 10 + px;
+    font-size:$size-value + rem;
+}
+
+//basic-containers
+@mixin basic-content-container {
+    background:$white;
+    padding:$basic-spacing $basic-spacing $large-spacing $basic-spacing;
+    border:2px solid $tertiaryBrandColor;
+    border-top:none;
+    border-bottom-width:5px;
+}
+
+// Box Shadows
+@mixin down-shadow ($shadow: 0px 6px 0px #ddd) {
+    -webkit-box-shadow:$shadow;
+    -moz-box-shadow: $shadow;
+    box-shadow:$shadow;
+}
+
+/* ------------------------------------------------------------------------------
+Buttons
+--------------------------------------- */
+
+// Standard Button Resting
+@mixin basic-button-style {
+    background:$secondary-color;
+    display: inline-block;
+    @include rem(font-size, 1.8rem);
+    color: $white;
+    padding:$sm-spacing/2.78 $sm-spacing;
+    font-weight:600;
+    font-family: $callout-font-stack;
+    text-align: center;
+    text-decoration:none;
+    position:relative;
+    border-left: $primary-button-border;
+    border-bottom: $primary-button-border;  
+}
+
+// Standard Button Hover
+@mixin hover-button-style {
+    color: $white;
+    background-color: $secondary-color-variant;
+    text-decoration:none;
+    border-left: $primary-button-border-hover;
+    border-bottom: $primary-button-border-hover;
+    cursor: pointer;
+}
+
+// Standard Button Active
+@mixin active-button-style {
+    color: $white;
+    background-color: $secondary-color-variant;
+    text-decoration:none;
+    border-left: $primary-button-border-hover;
+    border-bottom: $primary-button-border-hover;
+}
+
+
+// Invert Button Resting
+@mixin invert-button-style {
+    background: $primary-neutral;
+    display: inline-block;
+    @include rem(font-size, 1.8rem);
+    color: $primary-color;
+    padding:$sm-spacing/2.78 $sm-spacing;
+    font-weight:600;
+    text-align: center;
+    text-decoration:none;
+    position:relative;
+    border-left: $invert-button-border;
+    border-bottom: $invert-button-border;  
+}
+
+// Invert Button Hover
+@mixin invert-hover-button-style {
+    color: $primary-color;
+    background-color: $secondary-neutral;
+    text-decoration:none;
+    border-left: $invert-button-border-hover;
+    border-bottom: $invert-button-border-hover;
+    cursor: pointer;
+}
+
+// Invert Button Active
+@mixin invert-active-button-style {
+    color: $white;
+    background-color: $secondary-neutral;
+    text-decoration:none;
+    border-left: $invert-button-border-hover;
+    border-bottom: $invert-button-border-hover;
+}

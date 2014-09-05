@@ -1,0 +1,246 @@
+/* ------------------------------------------------------------------------------
+Main Site Header & Structure of Navigation
+--------------------------------------- */
+.site {
+	//For webkit bug
+	//Also keeping nav centered on large screens with use of max-width & small devices
+	.mobile-header-align {
+		display: block;
+		width: 300px;
+		margin: 0 auto;
+
+		@include breakpoint ($breakpoint768) {
+			width: auto;
+			max-width: 1014px;
+			padding: 0;
+		}
+
+		@include desktop-ie8 {
+			width: auto;
+			max-width: 1014px;
+			padding: 0;
+		}
+	}
+	.main-header {
+			position: absolute;
+			width: 100%;
+			height: 70px;
+			background: $white;
+			//fixes webkit specific bug on browser resize
+			display: table;
+
+			@include breakpoint ($breakpoint768){
+				position: fixed; 
+				top: 0; 
+				z-index: 900;
+				background: transparent;
+				height: auto;
+				height: 80px; 
+				
+			}
+
+			@include desktop-ie8 {
+				height: 80px; 
+			}
+
+			//Header Specific Container (breaks typical grid)
+			> .container {
+
+				width: 100%;
+
+				//mobile device large
+				@include breakpoint ($breakpoint480) {
+					width: 470px;
+				}
+
+				//Tablet device
+				@include breakpoint ($breakpoint768) {
+					width: 758px;
+				}
+
+				//Desktop with ie8 Support
+				@include desktop-ie8 {
+					width: 1014px;
+				}
+
+				//Desktop large
+				@include breakpoint ($breakpoint1200) {
+					width: 1190px;
+				}
+				
+
+				.main-nav-bar {
+					width: 300px;
+					margin: 0 auto;
+					padding: $sm-spacing/1.75 0;
+					//fixes webkit specific bug on browser resize
+					display: table-row;
+
+					@include breakpoint ($breakpoint768) {
+						width: auto;
+					}
+
+					@include desktop-ie8 {
+						width: auto;
+					}
+				}
+
+
+
+
+			} // End Header Specific Container
+
+
+		//Main logo of site	
+		.site-logo {
+			background: url(#{$structure-image-path}feldman-logo-blk.png) 0 0 no-repeat;
+			display: table-cell;
+			vertical-align: top;
+			height: atuo;
+			width: 90px;
+			height: 65px;
+
+			@include breakpoint ($breakpoint768) {
+				background: url(#{$structure-image-path}feldman-logo.png) 0 0 no-repeat;
+				background-size: 97%;
+				width: 153px;
+				height: 109px;
+			}
+
+			@include desktop-ie8 {
+				background: url(#{$structure-image-path}feldman-logo.png) 0 0 no-repeat;
+				background-size: 100%;
+				width: 153px;
+				height: 109px;
+			}
+		}
+
+		//Request Evaluation in Header on Mobile Only
+		.mobile-request {
+			display: table-cell;
+			vertical-align: top;
+			width: 55%;
+			padding: $sm-spacing;
+
+			@include breakpoint ($breakpoint768) {
+				display: none;
+			}
+
+			.req-appt {
+				text-transform: uppercase;
+
+					&:hover {
+						text-decoration: none;
+					}
+				 
+				 span {
+				 	display: inline-block;
+				 	zoom: 1;
+				 	*display: inline;
+				 	vertical-align: middle;
+				 	@include font-smoothing;
+
+				 	&:nth-of-type(1) {
+				 		@include rem(font-size, 3.2rem);
+				 	}
+
+				 	&:nth-of-type(2) {
+				 		font-family: $callout-font-stack;
+				 		@include rem(font-size, 1.2rem);
+				 		line-height: 1em;
+				 		padding-top: $sm-spacing/2;
+				 	}
+
+				 }
+			}
+		}
+
+		.nav-right {
+			display: table-cell;
+			vertical-align: top;
+			padding-top: $sm-spacing;
+
+			@include breakpoint ($breakpoint768) {
+				padding-top: 0;
+			}
+
+			@include desktop-ie8 {
+				padding-top: 0;
+			}
+		}
+
+		.site-tagline {
+			background: url(#{$structure-image-path}tagline.png) 0 0 no-repeat;
+			display: none;
+			height: 39px;
+			width: 257px;
+			float: right;
+			margin-bottom: $sm-spacing;
+			@include breakpoint ($breakpoint768) {
+				display: block;
+			}
+		}
+
+		//Nav layout struture next to header elements
+		.site-nav {
+			display: block;
+			clear: both;
+			float: right;
+
+
+			@include clear-fix;
+
+			> * {
+				float: right;
+
+			}
+
+			.sitenavigation {
+				
+
+				@include desktop-ie8 {
+
+					float: right;
+
+				}
+			}
+		}
+	}
+
+	//Class added for fixed nav/header
+	.header-fixed {
+
+		@include breakpoint ($breakpoint768) {
+			@include background-opacity($primary-color,.75);
+		}
+
+		//hiding tagline on scroll
+		.site-tagline {
+			display: none;
+		}
+
+		//Main logo of site	on scroll basically keeping small mobile logo
+		.site-logo {
+			background-size: 97%;
+			height: atuo;
+			width: 90px;
+			height: 68px;
+
+			@include breakpoint ($breakpoint768) {
+			height: atuo;
+			width: 90px;
+			height: 68px;
+			}
+
+			@include desktop-ie8 {
+			width: 90px;
+			height: 68px;
+			}
+		}
+
+		.sitenavigation {
+			margin-top: $sm-spacing;
+		}
+		
+	}
+}

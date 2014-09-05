@@ -1,0 +1,210 @@
+/* ------------------------------------------------------------------------------
+Fonts Used -- Linked from Google Fonts
+--------------------------------------- */
+
+/*Kameron Bold*/
+@import url(http://fonts.googleapis.com/css?family=Kameron:700);
+
+/*Source Sans Pro*/
+@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic);
+
+/* ------------------------------------------------------------------------------
+Icon Font
+--------------------------------------- */
+
+@font-face {
+  font-family: 'fontello';
+  src: url(#{$iconfonts-path}fontello.eot?96783999);
+  src: url(#{$iconfonts-path}fontello.eot?96783999#iefix) format('embedded-opentype'),
+       url(#{$iconfonts-path}fontello.woff?96783999) format('woff'),
+       url(#{$iconfonts-path}fontello.ttf?96783999) format('truetype'),
+       url(#{$iconfonts-path}fontello.svg?96783999#fontello) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?96783999#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+
+ //Icon classes & reference for content items
+.icon-minus-circled:before { content: '\e800'; } /* '' */
+.icon-plus-circled:before { content: '\e801'; } /* '' */
+.icon-left-circled:before { content: '\e802'; } /* '' */
+.icon-right-circled:before { content: '\e803'; } /* '' */
+.icon-up-circled:before { content: '\e804'; } /* '' */
+.icon-down-circled:before { content: '\e805'; } /* '' */
+.icon-mail:before { content: '\e806'; } /* '' */
+.icon-mail-alt:before { content: '\e807'; } /* '' */
+.icon-file-pdf:before { content: '\e808'; } /* '' */
+.icon-calendar:before { content: '\e809'; } /* '' */
+.icon-menu:before { content: '\e80a'; } /* '' */
+.icon-ambulance:before { content: '\e80b'; } /* '' */
+.icon-twitter:before { content: '\e80c'; } /* '' */
+.icon-pinterest-circled:before { content: '\e80d'; } /* '' */
+.icon-gplus:before { content: '\e80e'; } /* '' */
+.icon-instagramm:before { content: '\e80f'; } /* '' */
+.icon-linkedin:before { content: '\e810'; } /* '' */
+.icon-facebook:before { content: '\e811'; } /* '' */
+.icon-yelp:before { content: '\e812'; } /* '' */
+.icon-star:before { content: '\e813'; } /* '' */
+.icon-fax:before { content: '\e814'; } /* '' */
+.icon-mobile:before { content: '\e815'; } /* '' */
+.icon-location:before { content: '\e816'; } /* '' */
+.icon-spin3:before { content: '\e817'; } /* '' */
+
+
+/* ------------------------------------------------------------------------------
+Typographic Specific
+--------------------------------------- */
+
+//General Paragraph, Lists
+p, ul, ol {
+    margin: 0 0 $general-spacing;
+    @include font-smoothing;
+}
+
+
+//Make sure html b and strong tag is bold
+strong, b {
+    font-weight: 600;
+}
+
+//Make html em and i tag strong is italic
+em, i {
+    font-style: italic;
+}
+
+article {
+    @include clear-fix;
+}
+
+//for lists within bodies of text
+article ul li {
+    list-style-type: disc;
+    list-style-position: inside;
+    margin: 8px 0;
+}
+
+//for ol lists within bodies of text
+article ol li {
+    list-style-type: decimal;
+    list-style-position: inside;
+    margin: 8px 0;
+}
+
+
+/* ------------------------------------------------------------------------------
+Headers
+--------------------------------------- */
+
+#{headings()} {
+	color: $dark-base;
+    font-size: $font-size-base;
+    font-family: $callout-font-stack;
+    font-weight: 600;
+    margin: $general-spacing / 1.5 0 $general-spacing / 4 0;
+    @include font-smoothing;
+}
+
+h1, .h1 {
+    @include rem(font-size, 2.7rem);
+    line-height: 1.071;
+    margin: $general-spacing / 1.5 0;
+    color: $primary-color;
+    @include font-smoothing;
+
+    &.page-title {
+      margin-top: 0;
+    }
+
+}
+
+h2, .h2 {
+    @include rem(font-size, 2.4rem);
+    color: $tertiary-color;
+    @include font-smoothing;
+
+}
+
+h3, .h3 {
+    color: $primary-neutral;
+    @include rem(font-size, 4.8rem);
+    line-height: 1.2;
+}
+
+h4, .h4 {
+    color: $dark-base;
+    @include rem(font-size, 2.4rem);
+}
+
+h5, .h5 {
+	color: $tertiary-color;
+    @include rem(font-size, 1.6rem);
+    font-weight: 600;
+}
+
+h6, .h6 {
+	color: $dark-base;
+    @include rem(font-size, 1.6rem);
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+//Inverted colors for "banner" items
+.invert {
+    color: #fff;
+}
+
+h3.span-section-header {
+  @include rem(font-size, 3.8rem);
+  color: $dark-base;
+  text-transform: uppercase;
+  margin-bottom: -$sm-spacing/1.5;
+  
+  &.blue {
+    color: $primary-color;
+  }
+  &.orange {
+    color: $secondary-color;
+  }
+}
+

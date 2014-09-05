@@ -1,0 +1,201 @@
+//
+// Global Scaffolding
+// --------------------------------------------------
+
+//Include Compass Sitcky Footer
+@include sticky-footer(50px);
+
+#footer {
+  height: auto;
+  min-height: 50px;
+}
+
+.site {
+  @include clear-fix;
+}
+
+iframe {
+    //the height can be anything we want, this is arbitrary
+    min-height: 1500px;
+    width: 100%;
+    overflow: scroll;
+    border: 1px solid $tertiary-color;
+    margin: $general-spacing / 2 0;
+}
+
+// Reset the box-sizing
+
+*,
+*:before,
+*:after {
+  @include box-sizing(border-box);
+}
+
+
+// Body reset
+
+html {
+  font-size: 62.5%; //needed for rem
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+body {
+  font-family: $primary-font-stack;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $dark-base;
+  background-color: $page-color;
+}
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+
+// Links
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color;
+    text-decoration: underline;
+  }
+
+  &:focus {
+    color: $link-focus-color;
+  }
+}
+
+
+// General Images
+
+img {
+  vertical-align: middle;
+}
+
+// Responsive images
+.img-responsive {
+  @include responsive-img;
+}
+
+.img-full-width-responsive {
+  @include responsive-img-full-width;
+}
+
+// Rounded corners
+.img-rounded {
+  border-radius: $default-border-radius;
+}
+
+// Perfect circle
+.img-circle {
+  border-radius: 50%; // set radius in percents
+}
+
+.img-beige-border {
+  border-left: 5px solid $secondary-neutral;
+  border-bottom: 5px solid $secondary-neutral;
+}
+
+.img-blue-border {
+  border-left: 5px solid $primary-color;
+  border-bottom: 5px solid $primary-color;
+}
+
+.img-white-border {
+  border-left: 5px solid $white;
+  border-bottom: 5px solid $white;
+}
+
+
+// Horizontal rules
+
+hr {
+  margin-top:    $line-height-computed;
+  margin-bottom: $line-height-computed;
+  border: 0;
+  border-top: 1px solid $hr-border;
+}
+
+
+//Buttons - uses mixins for styles here we're just calling them & attaching to a class 
+
+//Standard Button
+.standard-btn {
+  @include basic-button-style;
+  @include font-smoothing;
+
+  &:hover {
+    @include hover-button-style;
+  }
+
+  &:active {
+    @include active-button-style; 
+  }
+}
+
+//Standard Button
+.invert-btn {
+  @include invert-button-style;
+  @include font-smoothing;
+
+  &:hover {
+    @include invert-hover-button-style;
+  }
+
+  &:active {
+    @include invert-active-button-style; 
+  }
+}
+
+//Standard Link Button 
+.link-btn {
+  font-family: $callout-font-stack;
+  color: $secondary-color;
+  @include rem(font-size, 1.8rem);
+  line-height: 1em;
+  @include font-smoothing;
+
+  &:after {
+    font-family: $icon-font;
+    content: '\e803';
+    @include rem(font-size, 1.8rem);
+    margin-left: $sm-spacing/2;
+  }
+
+  &:hover, &:active {
+    text-decoration: none;
+    color: $primary-color;
+  }
+}
+
+//Inverted Link Button 
+.invert-link-btn {
+  font-family: $callout-font-stack;
+  color: $white;
+  @include rem(font-size, 1.8rem);
+  line-height: 1em;
+  @include font-smoothing;
+
+  &:after {
+    font-family: $icon-font;
+    content: '\e803';
+    @include rem(font-size, 1.8rem);
+    margin-left: $sm-spacing/2;
+  }
+
+  &:hover, &:active {
+    text-decoration: none;
+    color: $secondary-neutral;
+  }
+}
+

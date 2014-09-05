@@ -1,0 +1,205 @@
+/* ------------------------------------------------------------------------------
+Breakpoints
+--------------------------------------- */
+
+/* General breakpoints using breakpoint gem -- Documentation here: http://breakpoint-sass.com/ */
+// assume min-width (by default) if only a number
+
+$breakpoint-medium-width: 500px;
+$breakpoint-medium-width-em: 30em;
+// set min-width/max-width if both values are numbers
+$breakpoint-medium-not-wide: 500px 700px;
+// set min/max of feature if there are two numbers
+$breakpoint-medium-height: height 300px 700px;
+// if one value is a string, assume a feature/value pair
+$breakpoint-kind-of-wide: min-width 700px;
+$breakpoint-not-too-wide: max-width 700px;
+// for multidimensional lists, assume each item is a feature value pair
+$breakpoint-wide-portrait: (max-width 700px) (orientation portrait);
+// handle one-sided features (ie. monochrome)
+$breakpoint-wide-portrait-mono: (max-width 700px) (orientation portrait) (monochrome);
+$breakpoint-mono: monochrome;
+$breakpoint-hi-rez: min-resolution 1.5dppx;
+$breakpoint1200: 1200px !default;
+$breakpoint1024: 1024px !default;
+$breakpoint768: 768px !default;
+$breakpoint480: 480px !default;
+
+$breakpoint600: 600px !default; //adding flexibility for footer
+
+$breakpoint768max: max-width 767px; // Specifically used for navigation mobile version
+
+
+
+/* ------------------------------------------------------------------------------
+SASS Paths
+--------------------------------------- */
+$structure-image-path: "../../images/site-structure/";
+$collateral-image-path: "../../images/placeholders/";
+$image-path: "../../images/";
+$iconfonts-path: "../iconfonts/";
+
+$icon-font: 'fontello';
+
+
+/* ------------------------------------------------------------------------------
+Utility
+--------------------------------------- */
+
+$general-spacing:			1em;
+$sm-spacing: 				.5em;
+$xsm-spacing:				.25em;
+$md-spacing:				1.25em;
+$lg-spacing:				1.5em;
+$xlg-spacing:				2em;
+$xxlg-spacing:				3em;
+
+$padding-base-vertical:		3px !default;
+$padding-base-horizontal:	10px !default;
+
+
+/* ------------------------------------------------------------------------------
+Color Pallet
+--------------------------------------- */
+
+$primary-color: 		     #66bce6;		//Feldman Light Blue
+$secondary-color: 		     #f68026;		//Feldman Orange
+$tertiary-color: 		     #284a6e;		//Dark Blue
+
+$primary-neutral:		     #fffaf2;		//Primary neutral
+
+//Variants
+$secondary-neutral:		     #f6ecdc;            //Secondary neutral
+$parimary-color-variant:     darken($primary-color, 5%);         //Feldman Light Blue variant
+$parimary-color-variant-drk: darken($parimary-color-variant, 5%);  //even darker variant
+$secondary-color-variant:    darken($secondary-color, 7%);     //Feldman orange variant
+
+$primary-accent-color:       #dddddd;		//Primary Accent Color
+$secondary-accent-color:     #dddddd;		//Primary Accent Color
+
+$dark-base: 		         #313131;		//Main Text Color & Dark Accent
+
+$white:					     #ffffff;
+$black:					     #000000;
+
+$page-color: 			     $primary-neutral;			//Page Background Color
+
+/* ------------------------------------------------------------------------------
+Typographic Elements
+--------------------------------------- */
+
+/*Fonts Elements*/
+$primary-font-stack:		'Source Sans Pro', Arial, Helvetica, sans-serif;
+$callout-font-stack:		'Kameron', Arial, Helvetica, sans-serif;
+
+$font-size-base:             1.6rem;
+
+$line-height-base:           1.428571429 !default; // 20/14
+$line-height-computed:       floor($font-size-base * $line-height-base) !default; // ~20px
+
+/*Links*/
+$link-color:				 $parimary-color-variant;
+$link-hover-color:			 $secondary-color;
+$link-focus-color:			 $secondary-color;
+
+$hr-border:					 #dddddd;
+
+/* ------------------------------------------------------------------------------
+Borders
+--------------------------------------- */
+
+$border-radius-base:             	4px !default;
+
+//for Compass CSS3 Mixin
+$default-border-radius: 			$border-radius-base;
+
+$primary-button-border:             5px solid $secondary-color-variant;
+$primary-button-border-hover:       5px solid $secondary-color;
+
+$invert-button-border: 				5px solid $secondary-neutral;
+$invert-button-border-hover: 		5px solid $primary-neutral;
+
+$secondary-border:             		3px solid $primary-neutral;
+
+$blue-variant-border: 				5px solid $parimary-color-variant-drk;
+
+
+/* ------------------------------------------------------------------------------
+Breadcrum Specific
+--------------------------------------- */
+$bc-active:     $primary-color;
+$bc-separator:  ">" !default;
+$bc-Color:       $primary-color;
+
+/* ------------------------------------------------------------------------------
+Forms & Input Specific
+--------------------------------------- */
+
+$input-height-base:              35px;
+
+
+$legend-color:			          #dddddd;
+$legend-border-color:	          #dddddd;
+
+$input-color:				      $dark-base;
+
+$input-bg:					      $white;
+$input-bg-disabled:			      #eeeeee;
+
+$input-border: 			          3px solid $primary-color;
+$invert-input-border: 			  3px solid $white;
+
+$input-border-radius:		      $border-radius-base;
+
+/* ------------------------------------------------------------------------------
+Main Site Navigation
+--------------------------------------- */
+
+// turn on indicators on drop down menu (non-mobile)
+$showindicators: false;
+
+// ### DROP DOWN STYLES ###
+
+// width of drop down menus
+$sub-min-width: 200px;
+$sub-max-width: 300px;
+
+$font-size: 14px;
+$line-height: 20px;
+$padding: 10px;
+
+// horizontal space between nav items at top level
+$drop-nav-spacing: 0px;
+
+$drop-item-text-color: $dark-base;
+$drop-item-back-color: lighten($primary-color, 15%);
+$drop-item-font: $callout-font-stack;
+
+$drop-item-text-hover-color: $primary-color;
+$drop-item-back-hover-color: $white;
+
+$drop-item-text-color-selected: $primary-color;
+$drop-item-back-color-selected: $white;
+
+$drop-indicators-color: $white;
+$drop-indicators-size: 12px;
+
+
+// ### MOBILE NAVIGATION STYLES ###
+
+// veticale gap between expanded mobile menu and top of browser
+$mobile-heading-gap: 65px;
+
+$mobile-font-size: $font-size;
+$mobile-item-font: $drop-item-font;
+$mobile-line-height: $line-height;
+
+// size allocated for tap area to trigger sub menus
+$mobile-sub-width: 20%;
+
+$mobile-indicators-color: #000;
+$mobile-indicators-back-color: #FFF; 
+
+//mobile button 
+$button-markers: #FFF;
+$button-back: #AAA;
