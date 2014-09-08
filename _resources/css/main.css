@@ -8362,7 +8362,7 @@ Hero Area Custom
   transition: all 0.5s linear;
 }
 
-li:hover .view-tenth img {
+#our-team li:hover .view-tenth img {
   -webkit-transform: scale(10);
   -moz-transform: scale(10);
   -o-transform: scale(10);
@@ -8373,13 +8373,13 @@ li:hover .view-tenth img {
   opacity: 0;
 }
 
-li:hover .view-tenth .mask {
+#our-team li:hover .view-tenth .mask {
   -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
   filter: alpha(opacity=100);
   opacity: 1;
 }
 
-li:hover .view-tenth h2, .view-tenth p, .view-tenth a.info {
+#our-team li:hover .view-tenth h2, #our-team li:hover .view-tenth p, #our-team li:hover .view-tenth a.info {
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -o-transform: scale(1);
@@ -8530,6 +8530,183 @@ li:hover .view-tenth h2, .view-tenth p, .view-tenth a.info {
 	--------------------------------------- */
 #latest-smiles {
   display: block;
+}
+#latest-smiles h5 {
+  text-align: left;
+  border-bottom: 2px solid #284a6e;
+}
+#latest-smiles h2 {
+  border-bottom: 3px solid #ffffff;
+}
+#latest-smiles ul.main {
+  text-align: center;
+  position: relative;
+}
+#latest-smiles ul.main li {
+  display: inline-block;
+  margin: 2rem 1rem 5rem 1rem;
+  cursor: pointer;
+  vertical-align: top;
+}
+#latest-smiles a.more-smiles {
+  display: block;
+  margin: 40px 0;
+  background: #f6ecdc;
+  min-height: 40px;
+  text-align: center;
+  color: #a98a59;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 40px;
+  font-family: "Kameron", Arial, Helvetica, sans-serif;
+}
+
+#latest-smiles li:hover h5 {
+  color: #43a1cf;
+}
+
+/*--------------------------------hover images css --------------------------*/
+#latest-smiles .view {
+  max-width: 260px;
+  max-height: 260px;
+  position: relative;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  text-align: center;
+  overflow: hidden;
+  -webkit-box-shadow: 1px 1px 2px #e6e6e6;
+  -moz-box-shadow: 1px 1px 2px #e6e6e6;
+  box-shadow: 1px 1px 2px #e6e6e6;
+  background: #66bce6;
+}
+#latest-smiles .view .mask, #latest-smiles .view .content {
+  width: 100%;
+  height: 100%;
+  max-width: 260px;
+  max-height: 260px;
+  padding: 40px 30px;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+}
+#latest-smiles .view img {
+  display: block;
+  position: relative;
+  max-width: 260px;
+  width: 100%;
+}
+
+/*----------------------------------  Animation ------------------------------*/
+.view-eleven p {
+  text-align: justify;
+  color: #ffffff;
+}
+
+.view-eleven h2 {
+  color: #ffffff;
+}
+
+.view-eleven img {
+  -webkit-transform: scaleY(1);
+  -moz-transform: scaleY(1);
+  -o-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  transform: scaleY(1);
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  -ms-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
+}
+
+.view-eleven .mask {
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+.view-eleven h2 {
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+.view-eleven p {
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+.vview-eleven a.info {
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -o-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+#latest-smiles li:hover .view-eleven img {
+  -webkit-transform: scale(10);
+  -moz-transform: scale(10);
+  -o-transform: scale(10);
+  -ms-transform: scale(10);
+  transform: scale(10);
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+
+#latest-smiles li:hover .view-eleven .mask {
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+#latest-smiles li:hover .view-eleven h2, #latest-smiles li:hover .view-eleven p, #latest-smiles li:hover .view-eleven a.info {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -ms-filter: "progid: DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
 }
 
 /* ------------------------------------------------------------------------------
