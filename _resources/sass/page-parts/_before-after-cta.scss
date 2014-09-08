@@ -1,0 +1,125 @@
+	/* ------------------------------------------------------------------------------
+        Before and after
+	--------------------------------------- */
+     
+	#before-after{
+	display:block;
+    .marg-top{margin-top:$margin-top-30;}
+    a.more-before-after{
+    display:block;
+    margin:40px 0;
+    background:$secondary-neutral;
+    min-height:40px;
+    text-align:center;
+    color:#a98a59;
+    text-decoration:none;
+    font-size:1.8rem;
+    font-weight:bold;
+    line-height:40px;
+    font-family:$callout-font-stack;
+           }
+    .before-after{
+    cursor:pointer;
+    }
+    .before-after .img-div{
+    width:50%;
+    opacity:1;
+    /* use 'opacity 1s ease' for just opacity */
+    -webkit-transition:all 1s ease;
+    -moz-transition:all 1s ease;
+    transition:all 1s ease;
+    float:left;
+    
+    }
+    .before-after:hover .img-div{
+    width:65%;
+    opacity:1;
+    }
+	.before-after .text-div{
+    width:40%;
+    -webkit-transition:all 1s ease;
+    -moz-transition:all 1s ease;
+    transition:all 1s ease;
+    float:left;
+    margin-left:5%;
+    display:block;
+    background:$white;
+    border-bottom:5px solid $secondary-neutral;
+    border-top:2px solid $secondary-neutral;
+    padding:2.0rem;
+    }
+
+    .before-after:hover .text-div{
+    width:30%;
+    float:left;
+    margin-left:5%;
+    background:$white;
+    }
+
+    .before-after h2{
+    margin-top:-10px;
+    display:block;
+    }
+	}
+
+	.before-after img{ 
+    width:100%;  
+    border:5px solid $secondary-neutral; 
+    margin-bottom:20px;
+    } 
+
+
+
+    /*--------------------------------------------  Before after alt --------------------------------*/
+    #before-after{
+    display:block;
+    .before-after-alt{
+    cursor:pointer;
+    }
+    .before-after-alt .img-div{
+    width:50%;
+    opacity:1;
+    /* use 'opacity 1s ease' for just opacity */
+    -webkit-transition:all 1s ease;
+    -moz-transition:all 1s ease;
+    transition:all 1s ease;
+    float:left;
+    
+    }
+    .before-after-alt:hover .img-div{
+    width:65%;
+    opacity:1;
+    }
+    .before-after-alt .text-div{
+    width:40%;
+    -webkit-transition:all 1s ease;
+    -moz-transition:all 1s ease;
+    transition:all 1s ease;
+    float:left;
+    margin-right:5%;
+    display:block;
+    background:$white;
+    border-bottom:5px solid $secondary-neutral;
+    border-top:2px solid $secondary-neutral;
+    padding:2.0rem
+    }
+
+    .before-after-alt:hover .text-div{
+    width:30%;
+    float:left;
+    margin-right:5%;
+    background:$white;
+    }
+
+    .before-after-alt h2{
+    margin-top:-10px;
+    display:block;
+    }
+    }
+
+    .before-after-alt img{ 
+    width:100%;  
+    border:5px solid $secondary-neutral; 
+    margin-bottom:20px;
+    } 
+    

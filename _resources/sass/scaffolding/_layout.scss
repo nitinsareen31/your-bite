@@ -20,6 +20,15 @@ Scaffolding Related to Layout
   @include clear-fix;
 }
 
+// Feldman-cream colored section
+.cream-span {
+  width: 100%;
+  height: auto;
+  background: $sub-secondary-color;
+  padding: $sm-spacing 0;
+  @include clear-fix;
+}
+
 // Feldman-orange colored section
 .orange-span {
   width: 100%;

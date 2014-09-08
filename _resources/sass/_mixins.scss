@@ -276,3 +276,77 @@ Buttons
     border-left: $invert-button-border-hover;
     border-bottom: $invert-button-border-hover;
 }
+
+
+
+
+
+// Standard Button Resting
+@mixin basic-button-style-small {
+    background:$secondary-color;
+    display: inline-block;
+    @include rem(font-size, 1.6rem);
+    color: $white;
+    padding:$sm-spacing $sm-spacing;
+    font-weight:600;
+    font-family: $callout-font-stack;
+    text-align: center;
+    text-decoration:none;
+    position:relative;
+    border-left: $primary-button-border;
+    border-bottom: $primary-button-border;  
+}
+
+// Standard Button Hover
+@mixin hover-button-style-small {
+    color: $white;
+    background-color: $secondary-color-variant;
+    text-decoration:none;
+    border-left: $primary-button-border-hover;
+    border-bottom: $primary-button-border-hover;
+    cursor: pointer;
+}
+
+// Standard Button Active
+@mixin active-button-style-small {
+    color: $white;
+    background-color: $secondary-color-variant;
+    text-decoration:none;
+    border-left: $primary-button-border-hover;
+    border-bottom: $primary-button-border-hover;
+}
+
+
+// Invert Button Resting
+@mixin invert-button-style-small {
+    background: $primary-neutral;
+    display: inline-block;
+    @include rem(font-size, 1.8rem);
+    color: $primary-color;
+    padding:$sm-spacing/2.78 $sm-spacing;
+    font-weight:600;
+    text-align: center;
+    text-decoration:none;
+    position:relative;
+    border-left: $invert-button-border;
+    border-bottom: $invert-button-border;  
+}
+
+// Invert Button Hover
+@mixin invert-hover-button-style-small {
+    color: $primary-color;
+    background-color: $secondary-neutral;
+    text-decoration:none;
+    border-left: $invert-button-border-hover;
+    border-bottom: $invert-button-border-hover;
+    cursor: pointer;
+}
+
+// Invert Button Active
+@mixin invert-active-button-style-small {
+    color: $white;
+    background-color: $secondary-neutral;
+    text-decoration:none;
+    border-left: $invert-button-border-hover;
+    border-bottom: $invert-button-border-hover;
+}

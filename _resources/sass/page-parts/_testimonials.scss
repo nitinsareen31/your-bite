@@ -1,0 +1,96 @@
+	/* ------------------------------------------------------------------------------
+         Testimonials 
+	--------------------------------------- */
+
+		#testimonials{
+		   .marg-top{margin-top:$margin-top-30}
+		   #share-testimonials{
+		   background:url(#{$structure-image-path}ribi-bg.png) -90px top no-repeat $secondary-neutral;
+		   min-height:150px; padding:15px;
+		   .bubble{
+		   background:url(#{$structure-image-path}share-testimonials-bubble.png) left top no-repeat; 
+		   display:block; 
+		   height:58px; 
+		   margin-bottom:20px;
+		   }
+		   a.button{
+		   @include basic-button-style-small;
+		   text-transform:uppercase;
+		   }
+		   a.button:hover{
+		   @include hover-button-style-small;
+		   }
+		   }
+		   .box-text{
+		   background:$white;
+		   padding:20px;
+		   display:block;
+		   border-top:$invert-button-border;
+		   border-bottom:$invert-button-border;
+		   .name-featured{
+		   font-weight:bold;
+		   display:block;
+		   }
+		   .review-us{
+		   display:block;
+		   padding-left:20px;
+		   }
+		   }
+		   .pull-left{
+		   float:$pull-left;
+		   margin:0 20px 10px 0;
+
+		   }
+		   .heading-title{
+		   background:url(#{$structure-image-path}ribi-bg.png) left top no-repeat $secondary-neutral;
+		   padding:20px 20px;
+		   .pull-left{
+		   float:left;
+		   margin:0;
+		   }
+		   h5{ margin-top:0; margin-bottom:0; margin-left:10px; padding:0; font-size:$varint-font-size; line-height:1.8rem;
+		   span{ display:block; color:$primary-color;}
+		   }
+		   }
+		   .video-testimonials{
+		   list-style:none;
+		   margin:0;
+		   margin-left:-20px;
+		   display:block;
+		   padding:0;
+
+		   a.more-videos{
+		   display:block;
+		   margin:40px 0;
+		   background:$secondary-neutral;
+		   min-height:40px;
+		   text-align:center;
+		   color:#a98a59;
+		   text-decoration:none;
+		   font-size:1.8rem;
+		   font-weight:bold;
+		   line-height:40px;
+		   font-family:$callout-font-stack;
+		   }
+
+		   li{
+		   display:inline-block;
+		   margin-left:20px;
+		   margin-right:20px;
+		   vertical-align:top;
+		   max-width:220px;
+		   margin-bottom:20px;
+
+		   img{
+		   postion:relative;
+		   }
+
+		   p{
+		   padding-top:10px;
+		   margin:0;
+		   }
+
+		   }
+		   }
+		}
+		 
