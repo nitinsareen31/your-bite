@@ -8377,9 +8377,21 @@ Hero Area Custom
   transition: all 1s ease;
   float: left;
 }
+@media (max-width: 460px) {
+  #before-after .before-after .img-div {
+    width: 100%;
+    float: none;
+  }
+}
 #before-after .before-after:hover .img-div {
   width: 65%;
   opacity: 1;
+}
+@media (max-width: 460px) {
+  #before-after .before-after:hover .img-div {
+    width: 100%;
+    float: none;
+  }
 }
 #before-after .before-after .text-div {
   width: 40%;
@@ -8394,11 +8406,25 @@ Hero Area Custom
   border-top: 2px solid #f6ecdc;
   padding: 2.0rem;
 }
+@media (max-width: 460px) {
+  #before-after .before-after .text-div {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
+}
 #before-after .before-after:hover .text-div {
   width: 30%;
   float: left;
   margin-left: 5%;
   background: #ffffff;
+}
+@media (max-width: 460px) {
+  #before-after .before-after:hover .text-div {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
 }
 #before-after .before-after h2 {
   margin-top: -10px;
@@ -8427,9 +8453,23 @@ Hero Area Custom
   transition: all 1s ease;
   float: left;
 }
+@media (max-width: 460px) {
+  #before-after .before-after-alt .img-div {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
+}
 #before-after .before-after-alt:hover .img-div {
   width: 65%;
   opacity: 1;
+}
+@media (max-width: 460px) {
+  #before-after .before-after-alt:hover .img-div {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+  }
 }
 #before-after .before-after-alt .text-div {
   width: 40%;
@@ -8442,13 +8482,27 @@ Hero Area Custom
   background: #ffffff;
   border-bottom: 5px solid #f6ecdc;
   border-top: 2px solid #f6ecdc;
-  padding: 2rem;
+  padding: 2.0rem;
+}
+@media (max-width: 460px) {
+  #before-after .before-after-alt .text-div {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+  }
 }
 #before-after .before-after-alt:hover .text-div {
   width: 30%;
   float: left;
   margin-right: 5%;
   background: #ffffff;
+}
+@media (max-width: 460px) {
+  #before-after .before-after-alt:hover .text-div {
+    width: 100%;
+    float: none;
+    margin-right: 0;
+  }
 }
 #before-after .before-after-alt h2 {
   margin-top: -10px;
@@ -8669,6 +8723,122 @@ Hero Area Custom
   font-weight: bold;
   line-height: 40px;
   font-family: "Kameron", Arial, Helvetica, sans-serif;
+}
+
+/* ------------------------------------------------------------------------------
+  FAQ SECTION
+------------------------------------------------------------------------------ */
+.st-accordion {
+  width: 100%;
+  min-width: 270px;
+  margin: 0 auto;
+}
+
+.st-accordion ul li {
+  overflow: hidden;
+  list-style: none;
+  background: #43a1cf;
+  border-left: 5px solid #43a1cf;
+  border-bottom: 5px solid #43a1cf;
+  min-height: 40px;
+}
+
+.st-accordion ul li > a {
+  background: #66bce6;
+  min-height: 38px;
+  padding-right: 30px;
+  display: block;
+  position: relative;
+  outline: none;
+  padding-left: 1rem;
+  color: #ffffff;
+  line-height: 38px;
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-decoration: none;
+  -webkit-transition: color 0.2s ease-in-out;
+  -moz-transition: color 0.2s ease-in-out;
+  -o-transition: color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
+}
+@media (max-width: 468px) {
+  .st-accordion ul li > a {
+    font-size: 1.2rem;
+    font-weight: normal;
+  }
+}
+@media (max-width: 768px) {
+  .st-accordion ul li > a {
+    font-size: 1.4rem;
+    font-weight: bold;
+  }
+}
+
+.st-accordion a span.st-arrow {
+  background: transparent url(../../images/site-structure/minus.png) no-repeat center center;
+  text-indent: -9000px;
+  width: 19px;
+  height: 19px;
+  position: absolute;
+  opacity: 1;
+  right: 15px;
+  top: 10px;
+}
+
+.st-accordion .st-open a span.st-arrow {
+  background: transparent url(../../images/site-structure/plus.png) no-repeat center center;
+  right: 15px;
+  top: 10px;
+}
+
+.st-accordion ul li > a:hover {
+  color: #ffffff;
+}
+
+.st-accordion ul li > a:hover span {
+  opacity: 1;
+}
+
+.st-accordion ul li.st-open > a {
+  color: #ffffff;
+}
+
+.st-accordion ul li.st-open > a span {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  transform: rotate(180deg);
+  opacity: 1;
+}
+
+.st-content {
+  padding: 5px 0px 15px 0px;
+}
+
+.st-content p {
+  font-size: 1.6rem;
+  color: #ffffff;
+  padding: 5px 4px 5px 4px;
+}
+
+.st-content img {
+  width: 125px;
+  border-right: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+}
+
+/* ------------------------------------------------------------------------------
+         Request an Appointment
+------------------------------------------------------------------------------- */
+form .label {
+  display: block;
+}
+form .input {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  border: 2px solid #43a1cf;
+  border-radius: 4px;
 }
 
 /* ------------------------------------------------------------------------------

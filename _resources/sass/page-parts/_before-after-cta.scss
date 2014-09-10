@@ -29,11 +29,18 @@
     -moz-transition:all 1s ease;
     transition:all 1s ease;
     float:left;
-    
+    @media (max-width: 460px){
+    width:100%;
+    float:none;
+    }
     }
     .before-after:hover .img-div{
     width:65%;
     opacity:1;
+    @media (max-width: 460px){
+    width:100%;
+    float:none;
+    }
     }
 	.before-after .text-div{
     width:40%;
@@ -47,6 +54,11 @@
     border-bottom:5px solid $secondary-neutral;
     border-top:2px solid $secondary-neutral;
     padding:2.0rem;
+    @media (max-width: 460px){
+    width:100%;
+    float:none;
+    margin-left:0;
+    }
     }
 
     .before-after:hover .text-div{
@@ -54,6 +66,11 @@
     float:left;
     margin-left:5%;
     background:$white;
+    @media (max-width: 460px){
+    width:100%;
+    float:none;
+    margin-left:0;
+    }
     }
 
     .before-after h2{
@@ -84,11 +101,20 @@
     -moz-transition:all 1s ease;
     transition:all 1s ease;
     float:left;
-    
+    @media (max-width: 460px){
+    width:100%;
+    float:none;
+    margin-left:0;
+    }
     }
     .before-after-alt:hover .img-div{
     width:65%;
     opacity:1;
+    @media (max-width: 460px){
+    width:100%;
+    float:none;
+    margin-left:0;
+    }
     }
     .before-after-alt .text-div{
     width:40%;
@@ -101,7 +127,12 @@
     background:$white;
     border-bottom:5px solid $secondary-neutral;
     border-top:2px solid $secondary-neutral;
-    padding:2.0rem
+    padding:2.0rem;
+    @media (max-width: 460px){
+    width:100%;
+    float:none;
+    margin-right:0;
+    }
     }
 
     .before-after-alt:hover .text-div{
@@ -109,6 +140,11 @@
     float:left;
     margin-right:5%;
     background:$white;
+    @media (max-width: 460px){
+    width:100%;
+    float:none;
+    margin-right:0;
+    }
     }
 
     .before-after-alt h2{

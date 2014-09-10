@@ -1,0 +1,86 @@
+/* ------------------------------------------------------------------------------
+  FAQ SECTION
+------------------------------------------------------------------------------ */
+.st-accordion{
+    width:100%;
+    min-width:270px;
+    margin: 0 auto;
+}
+.st-accordion ul li{
+    overflow: hidden;
+    list-style:none;
+    background:#43a1cf;
+    border-left:5px solid #43a1cf;
+    border-bottom:5px solid #43a1cf;
+    min-height:40px;
+}
+.st-accordion ul li > a{
+    background:$primary-color;
+    min-height:38px;
+    padding-right:30px;
+    display: block;
+	position: relative;
+	outline:none;
+	padding-left:1rem;
+	color:$white;
+	line-height:38px;
+	font-weight:bold;
+	font-size:1.8rem;
+	text-decoration:none;
+    -webkit-transition:  color 0.2s ease-in-out;
+	-moz-transition:  color 0.2s ease-in-out;
+	-o-transition:  color 0.2s ease-in-out;
+	-ms-transition:  color 0.2s ease-in-out;
+	transition:  color 0.2s ease-in-out;
+	@media (max-width: 468px){
+	font-size:1.2rem;
+	font-weight:normal;
+    }
+    @media (max-width: 768px){
+	font-size:1.4rem;
+	font-weight:bold;
+    }
+}
+.st-accordion a span.st-arrow{
+	background: transparent url(#{$structure-image-path}minus.png) no-repeat center center;
+	text-indent:-9000px;
+	width: 19px;
+	height: 19px;
+	position: absolute;
+	opacity:1;
+	right:15px;
+	top:10px;
+}
+.st-accordion .st-open a span.st-arrow{
+    background: transparent url(#{$structure-image-path}plus.png) no-repeat center center;
+    right:15px;
+	top:10px;
+}
+.st-accordion ul li > a:hover{
+    color:$white;
+}
+.st-accordion ul li > a:hover span{
+	opacity:1;
+}
+.st-accordion ul li.st-open > a{
+    color:$white;
+}
+.st-accordion ul li.st-open > a span{
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+    transform:rotate(180deg);
+	opacity:1;
+}
+.st-content{
+    padding: 5px 0px 15px 0px;
+}
+.st-content p{
+    font-size:1.6rem;
+    color:$white;
+    padding:5px 4px 5px 4px; 
+}
+.st-content img{
+    width:125px;
+    border-right:1px solid #fff;
+    border-bottom:1px solid #fff;
+}
