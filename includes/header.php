@@ -95,7 +95,7 @@
                                         <li><a href="#">Invisalign Teen</a></li>
                                         <li><a href="#">Invisalign Costs</a></li>
                                         <li><a href="#">Super Elite Preferred</a></li>
-                                        <li><a href="#">FAQ</a></li>
+                                        <li><a href="<?php echo SITE_URL?>faq.php">FAQ</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-dropdown"><a href="#">Braces & You</a>
@@ -137,13 +137,13 @@
                                     <li class="nav-dropdown"><a href="#">Contact</a>
                                         <ul>                      
                                             <li><a href="#">Locations</a></li>
-                                            <li><a href="#">Request an Appointment</a></li>
+                                            <li><a href="<?php echo SITE_URL?>request-appointment.php">Request an Appointment</a></li>
                                             <li><a href="#">Refer a Friend</a></li>
                                             <li><a href="#">Employment Opportunities</a></li>
                                         </ul>
                                     </li>
                                     <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Request an Appointment</a>
+                                    <li><a href="<?php echo SITE_URL?>request-appointment.php">Request an Appointment</a>
                                     </li>
                                 </span>
                             </ul>

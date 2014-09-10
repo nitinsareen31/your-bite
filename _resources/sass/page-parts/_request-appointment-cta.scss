@@ -123,4 +123,43 @@ form{
         text-transform:uppercase;
         }
 
+        .download-pdf{
+        background:url(#{$structure-image-path}ribi-bg.png) -90px top no-repeat $secondary-neutral;
+        min-height:200px;
+        margin-top:1rem;
+        padding:1rem;
+
+        .head-title{
+        background:url(#{$structure-image-path}download-pdf.png) left top no-repeat; 
+        display:block;
+        height:7rem;
+        padding-left:7.5rem;
+        font-size:2rem;
+        line-height:2rem;
+        font-weight:bold;
+        font-family:$callout-font-stack;
+        color:$tertiary-color;
+        padding-top:1.2rem;
+
         
+        }
+        a.button{
+        background:$primary-neutral;
+        border-left:5px solid $sub-secondary-color;
+        border-bottom:5px solid $sub-secondary-color;
+        display:block;
+        color:$secondary-color;
+        font-size:1.4rem;
+        line-height:16px;
+        text-decoration:none;
+        padding:1rem;
+        font-weight:bold;
+        margin-top:1.5rem;
+        span{
+        background:url(#{$structure-image-path}pdf-icon.png) left 3px no-repeat;
+        padding-left:3rem;
+        min-height:30px;
+        display:block;
+        }
+        }
+        }

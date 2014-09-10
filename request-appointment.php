@@ -21,6 +21,18 @@
                         </ul>
                     </div>
                     <?php include_once("includes/sidebar-left-address.php");?>
+                    <div class="download-pdf">
+                        <!-- title -->
+                        <div class="head-title">
+                            Download Patient Forms
+                        </div>
+                        <!-- title-->
+                        <ul>
+                            <li><a href="" class="button"><span>New Patient Form <br>(Under 18)</span></a></li>
+                            <li><a href="" class="button"><span>New Patient Form <br>(Over 18)</span></a></li>
+                            <li><a href="" class="button"><span>Dential Insurance Form <br>(Over 18)</span></a></li>
+                        </ul>
+                    </div>
                 </div>
                 <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 main-page-content">
                 <article id="request-form">

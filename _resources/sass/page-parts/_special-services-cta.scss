@@ -1,0 +1,63 @@
+/* ------------------------------------------------------------------------------
+    Special Services
+------------------------------------------------------------------------------- */   
+	
+	#special-services{
+	display:block;
+
+	ul.our-services{
+	list-style:none;
+	margin-left:-3rem;
+	margin-right:-1rem;
+	text-align:center;
+	}
+
+	.our-services li{
+	display:inline-block;
+	margin-left:1rem;
+	margin-right:1rem;
+	margin-bottom:3rem;
+	padding-bottom:1rem;
+	width:100%;
+	max-width:355px;
+	vertical-align:top;
+	background:$primary-color;
+	list-style:none;
+	img{
+	width:100%;
+	max-width:100%;
+	}
+	p{
+	color:$white;
+	text-align:justify;
+	padding:1rem;
+	margin-bottom:0;
+	}
+	.learn-more{
+	color:$white;
+	font-size:1.8rem;
+	font-weight:bold;
+	float:right;
+	text-decoration:none;
+	padding-right:1rem;
+	font-family:$callout-font-stack;
+	}
+	.service-links{
+	background:#43a1cf;
+	min-height:42px;
+	a{
+	color:$white;
+	font-size:2rem;
+	text-decoration:none;
+	display:block;
+	text-align:center;
+	font-weight:bold;
+	line-height:42px;
+	font-family:$callout-font-stack;
+	}
+	
+	}
+	}
+	}
+
+.borde{border-top:4px solid $secondary-neutral; padding-top:20px; margin-top:30px;}
