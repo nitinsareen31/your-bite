@@ -1,6 +1,16 @@
 /* ------------------------------------------------------------------------------
          Request an Appointment
 ------------------------------------------------------------------------------- */
+#request-form{
+	display:block;
+	.marg-top{margin-top:20px;}
+}
+
+#request-form .cen-align{
+	width:90%;
+	margin:0 auto;
+}
+
 form{
 	.label{
 	display:block;
@@ -12,5 +22,105 @@ form{
 	border:2px solid #43a1cf;
 	border-radius:4px;
 	}
+	.textarea{
+	width:100%;
+	min-height:100px;
+	border:2px solid #43a1cf;
+	background:#ffffff;
+	display:block;
+	}
 }
 		 
+/* ----------------------------------------------  Checkboxes and Radio inputs  ------------------------------------------*/
+	#request-form{	
+	input[type="radio"], 
+	input[type="checkbox"] { position: absolute; left: -999em; }
+		.label1{font-weight:normal; color:#43a1cf; line-height:20px;}
+	.label1:before { 
+		display: inline-block; position: relative; top:0.25em; left:-2px; ; 
+		content:''; width:25px; height:25px;
+		background-image:url(#{$structure-image-path}formelements.png); }
+	
+	input[type="checkbox"] + label:before { background-position: 0 -25px;}
+	input[type="checkbox"]:checked + label:before {background-position: 0 0 ; }
+		 
+	input[type="radio"] + label:before { background-position: -25px -25px;}	 	
+	input[type="radio"]:checked + label:before { background-position: -25px 0;}
+	
+		/* Remove the custom styling for IE 7-8 */
+		
+		.ie8 label:before { display:none; content:none; }
+		
+		.ie8 input[type="checkbox"],
+		.ie8 input[type="radio"],
+		.ie7 input[type="checkbox"],
+		.ie7 input[type="radio"]{ 
+			position: static; left:0; }
+		
+		.ie8 input[type="checkbox"],
+		.ie8 input[type="radio"] { 
+			position:relative; top:5px; margin-right:0.5em;}	
+			
+	input[type="text"]:focus, textarea:focus {
+		border-color:#000;
+		}
+
+
+		/* ----------------------------------------------  Inputs, textareas and selects  ---------------------------------------------- */
+
+
+	 div.styled, input[type="file"] { width:100%; height:35px; }
+	
+	div.styled, select 
+	input[type="file"]:after {
+		background:url(#{$structure-image-path}formelements-select.png) right top no-repeat #ffffff; border:2px solid #43a1cf; border-radius:4px; height:35px; line-height:30px;}	
+	
+	
+		.ie9 input[type="text"] { line-height:normal; } /* Get the stuff to line up right */
+	
+	
+/* ----------------------------------------------  Select menu  ---------------------------------------------- */
+	
+	/* For IE and Firefox */
+
+	div.styled { overflow:hidden; padding:0; margin:0; }
+		
+		.ie7 div.styled {border:none;}
+
+	div.styled select {	
+		width:115%; background-color:transparent; background-image:none;
+		-webkit-appearance: none; border:none; box-shadow:none;}
+		
+		.ie7 div.styled select {
+			width:100%; background-color:#fff; border: solid 1px #ccc; 
+			padding:0.3em 0.5em;}	
+		}
+
+		.check-box{
+		list-style:none;
+		padding:0;
+		margin:0;
+		}
+		.check-box li{
+		display:inline-block;
+		margin-right:10px;
+		margin-top:-1px;
+		}
+		.check-box li .label1{
+		line-height:30px;
+		color:#313131;
+		}
+
+		.submit{
+        margin-top:1rem;
+        @include basic-button-style-small;
+        text-transform:uppercase;
+        padding:6px 30px;
+        float:right;
+        }
+        .submit:hover{
+        @include hover-button-style-small;
+        text-transform:uppercase;
+        }
+
+        

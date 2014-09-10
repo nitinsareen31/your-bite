@@ -61,6 +61,7 @@
 
 	}
 /*--------------------------------hover images css --------------------------*/
+	#our-team {
 	.flip-container {
 	perspective: 1000;
 	}
@@ -124,7 +125,7 @@
 	 color:$white;
 	 }
 	}
-
+}
 	.tv-pro {
 	background:url(#{$structure-image-path}ribi-bg.png) left top no-repeat $secondary-neutral;
 	min-height:170px;
