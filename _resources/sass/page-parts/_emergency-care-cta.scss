@@ -24,7 +24,7 @@
     }
 }
 #emergency{
-
+    .marg-top{margin-top:$margin-top-30; margin-bottom:30px;}
     .img-resp{
     width:100%;
     max-width:278px;
@@ -43,8 +43,12 @@
     height:190px; 
     margin-top:20px; 
     display:block;
+    padding:2rem;
     }
     .align-cen{text-align:center;}
+    .bg-care{
+    background:none; 
+    }
     }
     @media (min-width:768px){
     .blue-box{
@@ -52,6 +56,10 @@
     height:190px; 
     margin-top:10px; 
     display:block;
+    padding:2rem;
+    }
+    .bg-care{
+    background:url(#{$structure-image-path}bg-care.png) center center no-repeat; 
     }
     }
 @media (min-width:1024px){
@@ -60,9 +68,77 @@
     height:190px; 
     margin-top:50px; 
     display:block;
+    padding:3rem;
+    }
+    .bg-care{
+    background:url(#{$structure-image-path}bg-care.png) center center no-repeat; 
     }
     }
-    
-    
-    
+    p{
+    font-size:1.8rem;
+    line-height:28px;
+    font-weight:900;
+    color:$white;
+    }
+    p a{
+    font-size:1.8rem;
+    color:$white;
+    font-weight:900;
+    text-decoration:underline;
+    }
+}
+
+.share-div{
+    background:#43a1cf;
+    min-height:50px;
+
+ul{
+    text-align:center;
+    padding-top:1.5rem;
+}
+
+li{
+    display:inline-block;
+    padding:0.5rem 0.1rem;
+    list-style:none;
+    line-height:30px;
+    font-size:2rem;
+    vertical-align:top;
+    text-transform:uppercase;
+    font-family:$callout-font-stack;
+    color:$white;
+}
+ li a{
+    display:block;
+}
+li a.share{
+    background:url(#{$structure-image-path}blog-share.png) left top no-repeat;
+    width:30px;
+    height:30px;
+    display:block;
+}
+ li a.facebook{
+    background:url(#{$structure-image-path}blog-share.png) -37px top no-repeat;
+    width:30px;
+    height:30px;
+    display:block;
+}
+ li a.tweet{
+    background:url(#{$structure-image-path}blog-share.png) -75px top no-repeat;
+    width:30px;
+    height:30px;
+    display:block;
+}
+ li a.linkidn{
+    background:url(#{$structure-image-path}blog-share.png) -113px top no-repeat;
+    width:30px;
+    height:30px;
+    display:block;
+}
+ li a.google{
+    background:url(#{$structure-image-path}blog-share.png) -151px top no-repeat;
+    width:30px;
+    height:30px;
+    display:block;
+}
 }
