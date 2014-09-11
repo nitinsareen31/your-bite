@@ -14,14 +14,14 @@
   @include clear-fix;
 }
 
-iframe {
+/*iframe {
     //the height can be anything we want, this is arbitrary
     min-height: 1500px;
     width: 100%;
     overflow: scroll;
     border: 1px solid $tertiary-color;
     margin: $general-spacing / 2 0;
-}
+}*/
 
 // Reset the box-sizing
 

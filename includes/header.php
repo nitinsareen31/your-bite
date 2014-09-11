@@ -68,7 +68,7 @@
                                         <li><a href="#">OUr 30 Minute Guarantee</a></li>
                                     </ul>
                                 </li>
-                                <li class="nav-dropdown"><a href="#">Specalties & Services</a>
+                                <li class="nav-dropdown"><a href="<?php echo SITE_URL?>special-services.php">Specalties & Services</a>
                                     <ul>
                                         <li><a href="#">Complimentary Exam</a></li>
                                         <li><a href="#">7up</a></li>
@@ -129,7 +129,7 @@
                                 <span class="secondary-nav">
                                     <li class="nav-dropdown"><a href="#">Community Involvement</a>
                                         <ul>                      
-                                            <li><a href="#">College Scholarships</a></li>
+                                            <li><a href="<?php echo SITE_URL?>college-scholarships.php">College Scholarships</a></li>
                                             <li><a href="#">Dental Health</a></li>
                                             <li><a href="#">Community Services</a></li>
                                         </ul>
