@@ -9104,6 +9104,162 @@ input[type="file"]:after {
 }
 
 /* ------------------------------------------------------------------------------
+       College Scholarships
+-------------------------------------------------------------------------------*/
+#college-scholarships #application {
+  background: url(../../images/site-structure/ribi-bg.png) -90px top no-repeat #f6ecdc;
+  min-height: 150px;
+  padding: 2rem;
+}
+#college-scholarships #application .bubble {
+  background: url(../../images/site-structure/scholarships-logo.png) left top no-repeat;
+  display: block;
+  height: 58px;
+  margin-bottom: 20px;
+}
+#college-scholarships #application a.button {
+  background: #f68026;
+  display: inline-block;
+  /* 3 */
+  /* 3 */
+  /* 4 */
+  /* 6 */
+  /* 6 */
+  /* 7 */
+  font-size: 16px;
+  /* 9 */
+  font-size: 1.6rem;
+  /* 9 */
+  color: #ffffff;
+  padding: 0.5em 0.5em;
+  font-weight: 600;
+  font-family: "Kameron", Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  border-left: 5px solid #ee6d0a;
+  border-bottom: 5px solid #ee6d0a;
+  text-transform: uppercase;
+}
+#college-scholarships #application a.button:hover {
+  color: #ffffff;
+  background-color: #ee6d0a;
+  text-decoration: none;
+  border-left: 5px solid #f68026;
+  border-bottom: 5px solid #f68026;
+  cursor: pointer;
+}
+
+#college-scholarships {
+  display: block;
+}
+#college-scholarships h5 {
+  text-align: left;
+  border-bottom: 2px solid #284a6e;
+}
+#college-scholarships h2 {
+  border-bottom: 3px solid #ffffff;
+}
+#college-scholarships ul.main {
+  text-align: center;
+  position: relative;
+}
+#college-scholarships ul.main li {
+  display: inline-block;
+  margin: 2rem 1rem 5rem 1rem;
+  cursor: pointer;
+  vertical-align: top;
+}
+#college-scholarships a.more-smiles {
+  display: block;
+  margin: 40px 0;
+  background: #f6ecdc;
+  min-height: 40px;
+  text-align: center;
+  color: #a98a59;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 40px;
+  font-family: "Kameron", Arial, Helvetica, sans-serif;
+}
+
+#latest-smiles li:hover h5 {
+  color: #43a1cf;
+}
+
+/*--------------------------------hover images css --------------------------*/
+#college-scholarships {
+  /* flip the pane when hovered */
+  /* flip speed goes here */
+  /* hide back of pane during swap */
+  /* front pane, placed above back */
+  /* back, initially hidden pane */
+}
+#college-scholarships .flip-container {
+  perspective: 1000;
+}
+#college-scholarships .flip-container:hover .flipper, #college-scholarships .flip-container.hover .flipper {
+  transform: rotateY(180deg);
+}
+#college-scholarships .flip-container, #college-scholarships .front, #college-scholarships .back {
+  width: 260px;
+  height: 260px;
+  overflow: hidden;
+}
+@media (max-width: 760px) {
+  #college-scholarships .flip-container, #college-scholarships .front, #college-scholarships .back {
+    width: 260px;
+    height: 260px;
+  }
+}
+@media (max-width: 460px) {
+  #college-scholarships .flip-container, #college-scholarships .front, #college-scholarships .back {
+    width: 260px;
+    height: 260px;
+  }
+}
+#college-scholarships .flipper {
+  transition: 0.6s;
+  transform-style: preserve-3d;
+  position: relative;
+}
+#college-scholarships .front, #college-scholarships .back {
+  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+}
+#college-scholarships .back {
+  background: #66bce6;
+  padding: 5rem 3rem;
+}
+#college-scholarships .front img {
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  max-width: 434px;
+  width: 100%;
+}
+#college-scholarships .front {
+  z-index: 2;
+  /* for firefox 31 */
+  transform: rotateY(0deg);
+}
+#college-scholarships .back {
+  transform: rotateY(180deg);
+}
+#college-scholarships .back p {
+  color: #ffffff;
+}
+#college-scholarships .back h2 {
+  color: #ffffff;
+}
+
+/* ------------------------------------------------------------------------------
 Responsive All
 --------------------------------------- */
 /*Responsive Partials*/
