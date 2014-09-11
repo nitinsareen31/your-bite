@@ -142,7 +142,7 @@
                                             <li><a href="#">Employment Opportunities</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Blog</a></li>
+                                    <li><a href="<?php echo SITE_URL?>blog-listing.php">Blog</a></li>
                                     <li><a href="<?php echo SITE_URL?>request-appointment.php">Request an Appointment</a>
                                     </li>
                                 </span>
